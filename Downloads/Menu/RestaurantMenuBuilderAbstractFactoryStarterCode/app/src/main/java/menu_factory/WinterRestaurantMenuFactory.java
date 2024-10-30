@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package menu_factory;
 import components.Dessert;
 import components.Drink;
@@ -13,8 +10,10 @@ import components.WinterEntree;
 import components.WinterMainCourse;
 
 /**
- *
- * @author gouraya
+ *This class provide spring-themed menu items, including drinks, main courses, entrees, 
+ * and desserts. Each method in this factory returns a specific item for the spring season 
+ * and displays a sample list of spring-themed options.
+ * 
  */
 public class WinterRestaurantMenuFactory implements RestaurantMenuFactory {
     

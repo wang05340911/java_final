@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package components;
 
+
 /**
- *
- * @author gouraya
+ *This class represents a type of dessert enjoyed during summer
+ * season, implementing the dessert interface.
  */
 public class SummerDessert implements Dessert {
     

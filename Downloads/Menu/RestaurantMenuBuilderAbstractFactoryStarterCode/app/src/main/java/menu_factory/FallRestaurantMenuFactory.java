@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package menu_factory;
 import components.Dessert;
 import components.Drink;
@@ -13,11 +10,17 @@ import components.FallEntree;
 import components.FallMainCourse;
 
 /**
- *
- * @author gouraya
+ *This class provide fall-themed menu items, including drinks, main courses, entrees, 
+ * and desserts. Each method in this factory returns a specific item for the fall season 
+ * and displays a sample list of fall-themed options.
+ * 
  */
 public class FallRestaurantMenuFactory implements RestaurantMenuFactory {
 
+    /**
+     * Creates and return fall drink
+     * @return  FallDrink instance
+     */
     @Override
     public Drink createDrink() {
         // Add the required code here
@@ -29,6 +32,10 @@ public class FallRestaurantMenuFactory implements RestaurantMenuFactory {
        
     }
     
+    /**
+     * Creates and return fall main course
+     * @return  FallMainCourse instance
+     */
     @Override
     public MainCourse createMainCourse() {
         // Add the required code here
@@ -37,6 +44,10 @@ public class FallRestaurantMenuFactory implements RestaurantMenuFactory {
          return new FallMainCourse();
     }
 
+    /**
+     * Creates and return fall entree
+     * @return  FallEntree instance
+     */
     @Override    
     public Entree createEntree() {
         // Add the required code here
@@ -45,6 +56,10 @@ public class FallRestaurantMenuFactory implements RestaurantMenuFactory {
          return new FallEntree();
     }
 
+    /**
+     * Creates and return fall desset
+     * @return  FallDessert instance
+     */
     @Override    
     public Dessert createDessert() {
         // Add the required code here

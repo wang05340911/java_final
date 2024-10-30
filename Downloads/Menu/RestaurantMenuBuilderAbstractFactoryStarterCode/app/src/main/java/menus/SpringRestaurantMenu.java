@@ -1,14 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package menus;
 
 import menu_factory.RestaurantMenuFactory;
 
 /**
- *
- * @author gouraya
+ * THis class represents a spring-themed menu. This class uses a RestaurantMenuFactory
+ * to create and populate the menu with spring-specific items, including entrees, main courses, 
+ * desserts, and drinks.
+ * 
  */
 public class SpringRestaurantMenu extends RestaurantMenu {
 
@@ -24,7 +23,7 @@ public class SpringRestaurantMenu extends RestaurantMenu {
         System.out.println("The " + getName());
         System.out.println("Active:" + getPeriod()+"\n");
         
-        // Insert code to assign menu items created 
+        
         theFactory.createEntree();
         theFactory.createMainCourse();
         theFactory.createDessert();

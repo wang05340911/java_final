@@ -1,17 +1,14 @@
 package menu_factory;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
-
 import components.Dessert;
 import components.Drink;
 import components.MainCourse;
 import components.Entree;
 /**
- *
- * @author gouraya
+ * Provides a layout for creating various components of restaurant menu
+ * i.e. drinks, dessert, main course, and entree. It enables the creation
+ * of a family of related objects that make up a complete menu.
+ * 
  */
 public interface RestaurantMenuFactory {
     

@@ -1,18 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package menu_building;
 import menu_factory.*;
 import menus.*;
 
 /**
- *
- * @author gouraya
+ *The following class provides an implementation of creating restaurant menus 
+ * based on the provided season. This class uses different factory instances
+ * to create and configure menus specific to fall, winter, spring, and summer.
+ * 
  */
 public class ConcreteMenuBuilding extends MenuBuilding {
     
     @Override
+    
+    /**
+     * Creates a seasonal menu based on the specified season.
+     * This method selects the appropriate RestaurantMenuFactory
+     * and RestaurantMenu subclasses, configuring them with 
+     * a name and period specific to the season.
+     *
+     * @param season the season for which the menu is created; 
+     *               expected values are "Fall", "Winter", "Spring", or "Summer"
+     * @return a RestaurantMenu instance for the specified season
+     */
+    
     protected RestaurantMenu makeMenuBuilding(String season) {
         RestaurantMenu theMenu = null;
         if ("Fall".equalsIgnoreCase(season)) {
