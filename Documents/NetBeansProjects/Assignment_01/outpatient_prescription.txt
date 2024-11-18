@@ -1,0 +1,13 @@
+Prescription
+========================
+Patient Name: Maria Schulich
+Date of Birth: 1980-10-27
+Diagnosis: The patient requires surgery for Chronic.The patient is 43 years old.
+Treatment Plan:Prescription Details:
+Daily Dosage: 3 times per day
+Duration: 180 days
+Surgery Date: N/A
+Risk Factor: Low
+Fasting Required: Yes
+Follow Up Date: Sun Nov 03 09:34:56 EST 2024
+

@@ -1,0 +1,12 @@
+Treatment Details 
+========================
+Patient Name: John Cena
+Date of Birth: 1997-10-17
+Diagnosis: The patient requires surgery for Broken Leg. The patient is 26 years old.
+Treatment Plan:
+Surgery Details:
+Surgery Date: Fri Oct 25 11:50:54 EDT 2024
+Risk Factor: Low
+Fasting Required: Yes
+Follow Up Date: Wed Nov 06 10:50:54 EST 2024
+<

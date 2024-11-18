@@ -1,0 +1,10 @@
+Treatment Details 
+========================
+Patient Name: Maria Schulich
+Date of Birth: 1980-10-27
+Diagnosis: The patient is diagnosed with Chronic and requires medication. The patient is 43.
+Treatment Plan:
+Prescription Details:
+Daily Dosage: 3 times per day
+Duration: 0 days
+
