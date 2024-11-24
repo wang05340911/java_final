@@ -9,7 +9,7 @@ package servlet;
  * @author han
  */
 
-import dao.UserDAO;
+import dao.UserDao;
 import models.User;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -18,13 +18,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class LoginServlet extends HttpServlet {
-    private UserDAO userDAO;
+    private UserDao userDAO;
 
     @Override
     public void init() {
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/AEP", "root", "password");
-            userDAO = new UserDAO(connection);
+            userDAO = new UserDao(connection);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

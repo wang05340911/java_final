@@ -12,10 +12,10 @@ package dao;
 import models.User;
 import java.sql.*;
 
-public class UserDAO {
+public class UserDao {
     private final Connection connection;
 
-    public UserDAO(Connection connection) {
+    public UserDao(Connection connection) {
         this.connection = connection;
     }
 

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 
-import dao.UserDAO;
+import dao.UserDao;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,13 +15,13 @@ import static org.junit.Assert.*;
 
 public class UserDAOTest {
     private Connection connection;
-    private UserDAO userDAO;
+    private UserDao userDAO;
 
     @Before
     public void setUp() throws Exception {
         // Initialize the database connection
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/AEP", "root", "Aa880911");
-        userDAO = new UserDAO(connection); // Pass the connection to your DAO
+        userDAO = new UserDao(connection); // Pass the connection to your DAO
     }
 
     @Test
