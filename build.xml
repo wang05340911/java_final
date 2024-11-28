@@ -1,30 +1,65 @@
-<project name="AcademicExchangePlatform" default="compile" basedir=".">
+<project name="AcademicExchangePlatform" default="war" basedir=".">
+    <!-- Define properties -->
     <property name="src.dir" value="src/main/java"/>
     <property name="build.dir" value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="lib.dir" value="lib"/>
     <property name="web.dir" value="src/main/webapp"/>
+    <property name="war.file" value="${build.dir}/final_project.war"/>
 
-    <!-- Clean -->
+    <!-- Clean target -->
     <target name="clean">
+        <echo message="Cleaning build directory..."/>
         <delete dir="${build.dir}"/>
     </target>
-
-    <!-- Compile -->
+    <target name="dist" depends="compile">
+        <mkdir dir="${dist.dir}"/>
+        <jar destfile="${dist.jar}" basedir="${build.classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="your.main.class.name"/>
+            </manifest>
+        </jar>
+    </target>
+    <!-- Compile Java sources -->
     <target name="compile" depends="clean">
+        <echo message="Compiling Java sources..."/>
         <mkdir dir="${classes.dir}"/>
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpath="${lib.dir}/*"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
     </target>
 
-    <!-- Create WAR -->
-    <target name="war" depends="compile">
+    <!-- Prepare WAR structure -->
+    <target name="prepare" depends="compile">
+        <echo message="Preparing WAR file structure..."/>
         <mkdir dir="${build.dir}/webapp"/>
         <copy todir="${build.dir}/webapp">
-            <fileset dir="${web.dir}"/>
+            <fileset dir="${web.dir}" excludes="WEB-INF/web.xml"/>
         </copy>
-        <war destfile="${build.dir}/final_project.war" webxml="${web.dir}/WEB-INF/web.xml">
+        <copy file="${web.dir}/WEB-INF/web.xml" todir="${build.dir}/webapp/WEB-INF"/>
+    </target>
+
+    <!-- Create WAR file -->
+    <target name="war" depends="prepare">
+        <echo message="Creating WAR file: ${war.file}..."/>
+        <war destfile="${war.file}" webxml="${build.dir}/webapp/WEB-INF/web.xml">
             <classes dir="${classes.dir}"/>
-            <lib dir="${lib.dir}"/>
+            <lib dir="${lib.dir}">
+                <include name="*.jar"/>
+            </lib>
+            <fileset dir="${build.dir}/webapp">
+                <include name="**/*"/>
+            </fileset>
         </war>
+    </target>
+
+    <!-- Run the project (optional, requires a web server like Tomcat) -->
+    <target name="run" depends="war">
+        <echo message="Deploying the WAR file to local server..."/>
+        <copy file="${war.file}" todir="/path/to/your/tomcat/webapps"/>
     </target>
 </project>
